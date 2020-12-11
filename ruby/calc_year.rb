@@ -1,3 +1,5 @@
+# 入力された年と月の日数を表示
+
 def get_days(year, month)
   month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
   days = month_days[month - 1]
