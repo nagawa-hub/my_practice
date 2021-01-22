@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $(".text:not(:first)").hide();
+        $(".title").on("click",function(){
+          $(".text").slideUp(500);
+          $("+.text", this).slideDown(500);
+        });
+
+      });
+    </script>
+    <style type="text/css">
+      .panel{
+        width: 500px;
+      }
+      .panel > .title{
+        height: 20px;
+        background-color: silver;
+        color: #fff;
+        cursor: pointer;
+        padding: 7px;
+        margin-bottom: 7px;
+        font-weight: bold;
+      }
+      .panel > .text{
+        margin: 7px 0 20px;
+        background-color: skyblue;
+        padding: 7px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <div class="title">トマト</div>
+      <p class="text">これはトマトのテキストです。</p>
+    </div>
+    <div class="panel">
+      <div class="title">玉ねぎ</div>
+      <p class="text">これは玉ねぎのテキストです。</p>
+    </div>
+    <div class="panel">
+      <div class="title">にんじん</div>
+      <p class="text">これはにんじんのテキストです。</p>
+    </div>
+  </body>
+</html>
