@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* スマホ用 */
 body {
   width: 100%;
   font-size: 0.9em;
@@ -47,4 +48,35 @@ footer {
   width: 100%;
   color: #fff;
   background-color: #000;
+}
+/* タブレット用 */
+@media only screen and (min-width: 481px) {
+  nav {
+    padding-left: 7%;
+  }
+  nav ul {
+    display: flex;
+    width: 100%;
+  }
+  nav ul li {
+    width: 100px;
+    text-align: center;
+    line-height: 3em;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: none;
+  }
+  main.contents .photo_menu section.photo_menu1 {
+    float: left;
+    width: 45%;
+  }
+  main.contents .photo_menu section.photo_menu2 {
+    float: right;
+    width: 45%;
+  }
+
+}
+/* PC用 */
+@media only screen and (min-width: 769px) {
+  
 }
