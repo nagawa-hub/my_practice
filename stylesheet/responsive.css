@@ -78,5 +78,17 @@ footer {
 }
 /* PC用 */
 @media only screen and (min-width: 769px) {
-  
+  aside {
+    width: 30%;
+    float: left;
+  }
+  main.contents .photo_menu section.photo_menu1,
+  main.contents .photo_menu section.photo_menu2 {
+    width: 95%;
+    float: none;
+  }
+  article {
+    width: 65%;
+    float: right;
+  }
 }
