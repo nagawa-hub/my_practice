@@ -20,11 +20,73 @@
   /* linear-gradient(開始位置と角度、開始色、途中色、終了色) */
   background: linear-gradient(-45deg, #f00, #fff 70%, #00f);
 }
-
-
+.ranking {
+  list-style-type: none;
+  counter-reset: ranking;
+}
+.ranking .ranking-item {
+  margin-bottom: 15px;
+}
+.ranking .order {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  color: #aaa;
+  text-align: center;
+  font-weight: bold;
+  line-height: 16px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ranking .order::before {
+  content: counter(ranking);
+  counter-increment: ranking;
+  display: inline-block;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ranking .ranking-item:nth-of-type(1) .order,
+.ranking .ranking-item:nth-of-type(2) .order,
+.ranking .ranking-item:nth-of-type(3) .order {
+  border: none;
+  color: #fff;
+  font-weight: normal;
+  line-height: 18px;
+}
+.ranking .ranking-item:nth-of-type(1) .order {
+  background-color: #dab413;
+}
+.ranking .ranking-item:nth-of-type(2) .order {
+  background-color: #6e7b84;
+}
+.ranking .ranking-item:nth-of-type(3) .order {
+  background-color: #a0541a;
+}
+/* :nth-of-type(n)で要素ごとに数えたn番目の要素を指定 */
 
 </style>
 <body>
   <p class="box_shadow">box_shadow</p>
   <p class="radius">border_radius</p>
+  <ol class="ranking">
+    <li class="ranking-item">
+      <span class="order"></span>
+    </li>
+    <li class="ranking-item">
+      <span class="order"></span>
+    </li>
+    <li class="ranking-item">
+      <span class="order"></span>
+    </li>
+    <li class="ranking-item">
+      <span class="order"></span>
+    </li>
+    <li class="ranking-item">
+      <span class="order"></span>
+    </li>
+  </ol>
 </body>
